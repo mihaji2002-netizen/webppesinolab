@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Scene } from "@/components/Scene";
 import { Reveal } from "@/components/Reveal";
 import { Geno } from "@/components/Geno";
+import { Logo } from "@/components/Logo";
 
 const FUTURE = [
   "داشبورد",
@@ -74,7 +75,8 @@ export function Welcome() {
 
       <footer className="relative z-10 border-t border-white/5">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-center md:flex-row md:text-left">
-          <span className="font-display text-lg font-semibold text-chalk">
+          <span className="flex items-center gap-2.5 font-display text-lg font-semibold text-chalk">
+            <Logo size={30} />
             پپسینوژن
           </span>
           <span className="fa-label text-haze">

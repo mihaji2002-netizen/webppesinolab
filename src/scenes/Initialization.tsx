@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Geno } from "@/components/Geno";
+import { Logo } from "@/components/Logo";
 
 const BOOT_LINES = [
   "داریم می‌شناسیمت …",
@@ -84,7 +85,13 @@ export function Initialization() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            <span className="eyebrow">پپسینوژن</span>
+            <div className="flex flex-col items-center gap-2.5">
+              <Logo size={54} />
+              <span className="font-display text-xl font-bold tracking-wide text-chalk">
+                پپسینوژن
+              </span>
+              <span className="fa-label text-cyan/80">فعال شو تا رشد کنی</span>
+            </div>
 
             <div className="h-5 overflow-hidden">
               <AnimatePresence mode="popLayout">
