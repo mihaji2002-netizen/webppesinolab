@@ -7,23 +7,23 @@ import { cn } from "@/lib/utils";
 const MOMENTS = [
   {
     k: "I",
-    title: "You&rsquo;ll be seen.",
-    body: "Mentors who actually know your name, your patterns, and the week you had.",
+    title: "دیده می‌شی.",
+    body: "مربی‌هایی که واقعاً اسمت رو می‌دونن، الگوهات رو می‌شناسن و می‌دونن این هفته چی بهت گذشته.",
   },
   {
     k: "II",
-    title: "You&rsquo;ll be measured — gently.",
-    body: "Feedback that points forward. It guides you; it never shames you.",
+    title: "سنجیده می‌شی — با ملایمت.",
+    body: "بازخوردی که رو به جلو نشونت می‌ده. راهنماییت می‌کنه؛ هیچ‌وقت شرمنده‌ت نمی‌کنه.",
   },
   {
     k: "III",
-    title: "You&rsquo;ll build momentum.",
-    body: "Small, honest wins, stacked one day at a time until they feel like identity.",
+    title: "شتاب می‌گیری.",
+    body: "بردهای کوچیک و صادقانه، روزبه‌روز روی هم تلنبار می‌شن تا بشن بخشی از هویتت.",
   },
   {
     k: "IV",
-    title: "You&rsquo;ll grow into someone worth keeping.",
-    body: "Long after the syllabus is forgotten, the person you became remains.",
+    title: "تبدیل می‌شی به آدمی که می‌ارزه بمونه.",
+    body: "خیلی بعد از اینکه درس‌ها فراموش بشن، آدمی که شدی می‌مونه.",
   },
 ];
 
@@ -33,10 +33,10 @@ const MOMENTS = [
  */
 export function Experience() {
   return (
-    <Scene id="experience" index="07" label="What You'll Experience" full={false}>
+    <Scene id="experience" index="07" label="چی تجربه می‌کنی" full={false}>
       <div className="mx-auto w-full max-w-6xl px-6 py-32">
         <Reveal as="span" className="eyebrow mb-16 block">
-          What you&rsquo;ll experience
+          اینجا چی رو تجربه می‌کنی
         </Reveal>
 
         <div className="flex flex-col gap-24 md:gap-40">

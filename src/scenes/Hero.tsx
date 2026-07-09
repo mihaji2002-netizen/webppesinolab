@@ -21,7 +21,7 @@ export function Hero() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
-    <Scene ref={ref} id="hero" index="01" label="Hero" className="flex">
+    <Scene ref={ref} id="hero" index="01" label="ورود" className="flex">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-iris/20 blur-[120px]" />
 
@@ -35,29 +35,32 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 1 }}
         >
-          An ecosystem — not an institute
+          یه اکوسیستم — نه یه مؤسسه
         </motion.span>
 
         <h1 className="display-hero text-balance">
-          <RevealWord delay={0.35}>You&rsquo;re</RevealWord>{" "}
-          <RevealWord delay={0.45}>not</RevealWord>{" "}
-          <RevealWord delay={0.55}>a</RevealWord>{" "}
+          <RevealWord delay={0.35}>تو</RevealWord>{" "}
+          <RevealWord delay={0.45}>اینجا</RevealWord>{" "}
+          <RevealWord delay={0.55}>فقط</RevealWord>{" "}
+          <RevealWord delay={0.65}>یه</RevealWord>{" "}
           <span className="text-gradient-iris">
-            <RevealWord delay={0.7}>student</RevealWord>
-          </span>
+            <RevealWord delay={0.8}>دانش‌آموز</RevealWord>
+          </span>{" "}
+          <RevealWord delay={0.95}>نیستی.</RevealWord>
           <br />
-          <RevealWord delay={0.9}>here.</RevealWord>{" "}
-          <RevealWord delay={1.05}>You&rsquo;re</RevealWord>{" "}
-          <RevealWord delay={1.2}>becoming.</RevealWord>
+          <RevealWord delay={1.15}>تو</RevealWord>{" "}
+          <RevealWord delay={1.3}>داری</RevealWord>{" "}
+          <RevealWord delay={1.45}>بزرگ</RevealWord>{" "}
+          <RevealWord delay={1.6}>می‌شی.</RevealWord>
         </h1>
 
         <motion.p
           className="mt-10 max-w-md text-pretty text-base text-mist md:text-lg"
           initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 1.5, duration: 1.1 }}
+          transition={{ delay: 1.9, duration: 1.1 }}
         >
-          Grades are temporary. Character stays forever.
+          نمره‌ها موقتی‌ان. آدم بودنت برای همیشه می‌مونه.
         </motion.p>
       </motion.div>
 

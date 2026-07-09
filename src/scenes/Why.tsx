@@ -8,12 +8,12 @@ import { Reveal } from "@/components/Reveal";
  */
 export function Why() {
   return (
-    <Scene id="why" index="02" label="Why It Exists" className="flex">
+    <Scene id="why" index="02" label="چرا هستیم" className="flex">
       <div className="pointer-events-none absolute right-[-10%] top-1/2 h-[60vmin] w-[60vmin] -translate-y-1/2 rounded-full bg-space/60 blur-[120px]" />
 
       <div className="mx-auto flex min-h-[100svh] w-full max-w-5xl flex-col justify-center px-6 py-24">
         <Reveal as="span" className="eyebrow mb-10">
-          Why this exists
+          چرا اصلاً وجود داریم
         </Reveal>
 
         <div className="space-y-8">
@@ -21,7 +21,7 @@ export function Why() {
             as="p"
             className="display-lg text-gradient-soft text-balance"
           >
-            Traditional education wasn&rsquo;t enough.
+            آموزشِ سنتی برامون کافی نبود.
           </Reveal>
 
           <Reveal
@@ -29,10 +29,10 @@ export function Why() {
             className="max-w-2xl text-lg leading-relaxed text-mist md:text-2xl"
             amount={0.5}
           >
-            So the founder didn&rsquo;t try to become{" "}
-            <span className="text-chalk">different</span>. He tried to rebuild
-            the system using science — because a system that ignores how people
-            actually learn will always fail the people inside it.
+            برای همین بنیان‌گذارِ ما دنبالِ این نبود که فقط{" "}
+            <span className="text-chalk">متفاوت</span> باشه. نشست و کل سیستم رو با
+            تکیه بر علم از نو ساخت — چون سیستمی که به «آدم‌ها واقعاً چطور یاد
+            می‌گیرن» بی‌اعتنا باشه، آخرش آدم‌های داخلِ خودش رو زمین می‌زنه.
           </Reveal>
         </div>
 
@@ -41,8 +41,8 @@ export function Why() {
           amount={0.6}
         >
           <span className="h-px w-16 bg-iris/60" />
-          <span className="font-mono text-sm text-cyan">Science wins.</span>
-          <span className="font-mono text-sm text-haze">Ego loses.</span>
+          <span className="fa-label text-cyan">علم برنده می‌شه.</span>
+          <span className="fa-label text-haze">غرور می‌بازه.</span>
         </Reveal>
       </div>
     </Scene>

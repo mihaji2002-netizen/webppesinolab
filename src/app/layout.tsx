@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora, JetBrains_Mono } from "next/font/google";
+import { Vazirmatn, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Grain } from "@/components/Grain";
 
-const inter = Inter({
-  subsets: ["latin"],
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic", "latin"],
   variable: "--font-sans",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-display",
   display: "swap",
 });
 
@@ -25,21 +18,22 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pepsinogen — Enter the ecosystem",
+  title: "پپسینوژن — وارد اکوسیستم شو",
   description:
-    "Pepsinogen is not an educational institute. It is an ecosystem built on learning science, designed to help students evolve — not just academically, but as human beings.",
+    "پپسینوژن یک مؤسسه‌ی آموزشی نیست؛ یک اکوسیستمه که روی علمِ یادگیری ساخته شده تا کمک کنه دانش‌آموز رشد کنه — نه فقط درسی، بلکه به‌عنوان یک آدم.",
   keywords: [
+    "پپسینوژن",
+    "آزمایشگاه پپسینو",
+    "علم یادگیری",
+    "اکوسیستم دانش‌آموز",
+    "آموزش از نو",
     "Pepsinogen",
-    "Pepsino Lab",
-    "learning science",
-    "student ecosystem",
-    "education reimagined",
   ],
-  authors: [{ name: "Pepsinogen" }],
+  authors: [{ name: "پپسینوژن" }],
   openGraph: {
-    title: "Pepsinogen — Enter the ecosystem",
+    title: "پپسینوژن — وارد اکوسیستم شو",
     description:
-      "Grades are temporary. Character stays forever. Enter Pepsinogen.",
+      "نمره‌ها موقتی‌ان. آدم بودنت برای همیشه می‌مونه. وارد پپسینوژن شو.",
     type: "website",
   },
 };
@@ -55,8 +49,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${sora.variable} ${jetbrains.variable}`}
+      lang="fa"
+      dir="rtl"
+      className={`${vazirmatn.variable} ${jetbrains.variable}`}
     >
       <body className="bg-void text-chalk antialiased">
         <SmoothScroll>{children}</SmoothScroll>

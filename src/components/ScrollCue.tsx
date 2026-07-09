@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 /** A restrained hint that the world continues below. */
-export function ScrollCue({ label = "Scroll to enter" }: { label?: string }) {
+export function ScrollCue({ label = "برای ورود اسکرول کن" }: { label?: string }) {
   return (
     <motion.div
       className="flex flex-col items-center gap-3"
@@ -11,7 +11,7 @@ export function ScrollCue({ label = "Scroll to enter" }: { label?: string }) {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.4, duration: 1.2 }}
     >
-      <span className="font-mono text-[0.6rem] tracking-widest2 text-haze">
+      <span className="fa-label text-haze">
         {label}
       </span>
       <span className="relative flex h-10 w-[1px] overflow-hidden bg-haze/20">

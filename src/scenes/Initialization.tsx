@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Geno } from "@/components/Geno";
+import { Logo } from "@/components/Logo";
 
 const BOOT_LINES = [
-  "authenticating visitor …",
-  "you have already been accepted",
-  "loading learning-science core …",
-  "calibrating environment to you …",
-  "waking Geno …",
+  "داریم می‌شناسیمت …",
+  "تو از همین حالا یکی از مایی",
+  "بارگذاری هسته‌ی علمِ یادگیری …",
+  "داریم دنیا رو برای تو تنظیم می‌کنیم …",
+  "بیدار کردنِ جنو …",
 ];
 
 /**
@@ -63,7 +64,7 @@ export function Initialization() {
           key="init"
           id="init"
           data-scene="00"
-          aria-label="Initialization"
+          aria-label="شروع"
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-void"
           exit={{ opacity: 0, filter: "blur(12px)" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
@@ -84,13 +85,19 @@ export function Initialization() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            <span className="eyebrow">Pepsinogen</span>
+            <div className="flex flex-col items-center gap-2.5">
+              <Logo size={54} />
+              <span className="font-display text-xl font-bold tracking-wide text-chalk">
+                پپسینوژن
+              </span>
+              <span className="fa-label text-cyan/80">فعال شو تا رشد کنی</span>
+            </div>
 
             <div className="h-5 overflow-hidden">
               <AnimatePresence mode="popLayout">
                 <motion.p
                   key={step}
-                  className="font-mono text-xs text-mist"
+                  className="fa-label text-mist"
                   initial={{ y: 18, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -18, opacity: 0 }}

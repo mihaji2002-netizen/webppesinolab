@@ -5,11 +5,11 @@ import { Reveal } from "@/components/Reveal";
 import { motion } from "framer-motion";
 
 const DISCIPLINES = [
-  "Learning Science",
-  "Behavioral Psychology",
-  "Neuroscience",
-  "Instructional Design",
-  "Continuous Experimentation",
+  "علمِ یادگیری",
+  "روان‌شناسیِ رفتار",
+  "علوم اعصاب",
+  "طراحیِ آموزشی",
+  "آزمایشِ بی‌وقفه",
 ];
 
 /**
@@ -17,7 +17,7 @@ const DISCIPLINES = [
  */
 export function Philosophy() {
   return (
-    <Scene id="philosophy" index="04" label="The Philosophy" className="flex">
+    <Scene id="philosophy" index="04" label="فلسفه" className="flex">
       {/* Slow drifting discipline marquee behind */}
       <div className="pointer-events-none absolute inset-0 flex flex-col justify-center gap-2 overflow-hidden opacity-[0.05]">
         {[0, 1, 2].map((row) => (
@@ -36,13 +36,13 @@ export function Philosophy() {
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-5xl flex-col justify-center px-6 py-24">
         <Reveal as="span" className="eyebrow mb-10">
-          The philosophy
+          فلسفه‌ی ما
         </Reveal>
 
         <Reveal as="h2" className="display-xl text-balance">
-          Every decision here is
+          اینجا پشتِ هر تصمیمی
           <br />
-          <span className="text-gradient-iris">backed by evidence.</span>
+          <span className="text-gradient-iris">شواهدِ علمی هست.</span>
         </Reveal>
 
         <Reveal
@@ -50,9 +50,9 @@ export function Philosophy() {
           className="mt-10 max-w-xl text-lg leading-relaxed text-mist md:text-xl"
           amount={0.5}
         >
-          Not opinion. Not tradition. Not whatever worked last year. If a choice
-          can&rsquo;t be defended by how humans actually learn, it doesn&rsquo;t
-          make it in.
+          نه سلیقه، نه عادت، نه «پارسال این‌جوری جواب داد». اگه یه انتخاب رو نشه
+          با «آدم‌ها واقعاً چطور یاد می‌گیرن» توجیه کرد، اصلاً راه پیدا نمی‌کنه
+          به اینجا.
         </Reveal>
 
         <ul className="mt-14 flex flex-wrap gap-x-8 gap-y-4">
@@ -61,9 +61,9 @@ export function Philosophy() {
               as="span"
               key={d}
               amount={0.8}
-              className="group flex items-center gap-3 font-mono text-sm text-haze transition-colors hover:text-cyan"
+              className="group flex items-center gap-3 fa-label text-sm text-haze transition-colors hover:text-cyan"
             >
-              <span className="text-cyan/60">0{i + 1}</span>
+              <span className="font-mono text-cyan/60">0{i + 1}</span>
               {d}
             </Reveal>
           ))}

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Sora", system-ui, sans-serif;
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+  --font-display: "Vazirmatn", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   color-scheme: dark;
 }
@@ -69,35 +69,47 @@ body {
     text-wrap: pretty;
   }
 
-  /* Big, cinematic display type */
+  /* Big, cinematic display type — tuned for Persian (looser line-height,
+     no negative tracking so letters keep their proper joins). */
   .display-hero {
     font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 0.92;
-    letter-spacing: -0.045em;
-    font-size: clamp(3.2rem, 12vw, 11rem);
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: 0;
+    font-size: clamp(2.8rem, 11vw, 10rem);
   }
   .display-xl {
     font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    font-size: clamp(2.6rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: 0;
+    font-size: clamp(2.3rem, 7.5vw, 6rem);
   }
   .display-lg {
     font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.035em;
-    font-size: clamp(2rem, 5.5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
+    font-size: clamp(1.9rem, 5vw, 4rem);
   }
 
+  /* Small "kicker" label. In Persian we drop uppercase + wide tracking
+     (they break the cursive joins) and use the sans face instead. */
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0;
     color: theme("colors.cyan");
+  }
+
+  /* Persian-safe replacement for the mono "tech label" look: keep it small
+     and quiet, but use the readable sans face with normal spacing. */
+  .fa-label {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0;
   }
 
   .text-gradient-iris {

@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+# Builds the Next.js site as a static export and publishes it to the
+# `gh-pages` branch. Enable Pages once via Settings -> Pages ->
+# "Deploy from a branch" -> gh-pages / (root). After that, every push
+# here redeploys automatically.
+
+on:
+  push:
+    branches:
+      - main
+      - cursor/deploy-github-pages-3ff8
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          GITHUB_PAGES: "true"
+
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages

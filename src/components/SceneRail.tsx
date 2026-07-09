@@ -39,7 +39,8 @@ export function SceneRail() {
 
   return (
     <nav
-      aria-label="Scenes"
+      aria-label="بخش‌ها"
+      dir="ltr"
       className={cn(
         "fixed right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-end gap-4 transition-opacity duration-700 md:flex",
         visible ? "opacity-100" : "pointer-events-none opacity-0",
@@ -54,7 +55,7 @@ export function SceneRail() {
         >
           <span
             className={cn(
-              "font-mono text-[0.6rem] tracking-widest2 transition-all duration-500",
+              "fa-label whitespace-nowrap transition-all duration-500",
               active === i
                 ? "text-cyan opacity-100"
                 : "text-haze opacity-0 group-hover:opacity-70",
