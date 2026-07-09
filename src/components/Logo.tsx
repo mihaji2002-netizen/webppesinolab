@@ -31,7 +31,14 @@ export function Logo({
       fill="none"
     >
       <defs>
-        <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
+        <linearGradient
+          id={gid}
+          gradientUnits="userSpaceOnUse"
+          x1="10"
+          y1="10"
+          x2="110"
+          y2="110"
+        >
           <stop offset="0%" stopColor="#8B7BFF" />
           <stop offset="100%" stopColor="#6FE9F5" />
         </linearGradient>
