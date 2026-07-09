@@ -6,12 +6,12 @@ import { Reveal } from "@/components/Reveal";
 import { Geno } from "@/components/Geno";
 
 const FUTURE = [
-  "Dashboard",
-  "Missions",
-  "XP & Ranking",
-  "Community",
-  "AI Mentor",
-  "Events",
+  "داشبورد",
+  "مأموریت‌ها",
+  "امتیاز و رتبه",
+  "انجمن",
+  "مربیِ هوش مصنوعی",
+  "رویدادها",
 ];
 
 /**
@@ -20,7 +20,7 @@ const FUTURE = [
  */
 export function Welcome() {
   return (
-    <Scene id="welcome" index="10" label="Welcome Home" full={false}>
+    <Scene id="welcome" index="10" label="به خونه خوش اومدی" full={false}>
       <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center px-6 py-32 text-center">
         {/* Portal glow */}
         <motion.div
@@ -40,7 +40,7 @@ export function Welcome() {
         </motion.div>
 
         <Reveal as="h2" className="display-hero relative z-10 text-balance">
-          <span className="text-gradient-iris">Welcome home.</span>
+          <span className="text-gradient-iris">به خونه خوش اومدی.</span>
         </Reveal>
 
         <Reveal
@@ -48,16 +48,16 @@ export function Welcome() {
           amount={0.6}
           className="relative z-10 mt-10 max-w-lg text-lg leading-relaxed text-mist md:text-xl"
         >
-          You didn&rsquo;t visit a website. You entered an ecosystem — and
-          you&rsquo;ve been here all along.
+          تو یه وب‌سایت رو ندیدی. تو وارد یه اکوسیستم شدی — و راستش از همون اول هم
+          اینجا بودی.
         </Reveal>
 
         <Reveal
           className="relative z-10 mt-14 flex flex-col items-center gap-6"
           amount={0.8}
         >
-          <span className="font-mono text-[0.6rem] tracking-widest2 text-haze">
-            What grows here next
+          <span className="fa-label text-haze">
+            بعد از این، اینجا چی رشد می‌کنه
           </span>
           <ul className="flex max-w-2xl flex-wrap items-center justify-center gap-x-6 gap-y-3">
             {FUTURE.map((f) => (
@@ -74,14 +74,14 @@ export function Welcome() {
 
       <footer className="relative z-10 border-t border-white/5">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-center md:flex-row md:text-left">
-          <span className="font-display text-lg font-semibold tracking-tightest text-chalk">
-            Pepsinogen
+          <span className="font-display text-lg font-semibold text-chalk">
+            پپسینوژن
           </span>
-          <span className="font-mono text-[0.65rem] tracking-widest2 text-haze">
-            Grades are temporary. Character stays forever.
+          <span className="fa-label text-haze">
+            نمره‌ها موقتی‌ان. آدم بودنت برای همیشه می‌مونه.
           </span>
-          <span className="font-mono text-[0.6rem] text-haze/60">
-            © {new Date().getFullYear()} — an ecosystem, still growing.
+          <span className="fa-label text-haze/60">
+            © {new Date().getFullYear()} — یه اکوسیستم که هنوز داره رشد می‌کنه.
           </span>
         </div>
       </footer>

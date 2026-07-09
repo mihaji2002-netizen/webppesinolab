@@ -15,76 +15,76 @@ type Discovery = {
 const DISCOVERIES: Discovery[] = [
   {
     code: "BHV",
-    name: "Behavior Analysis",
-    body: "We read patterns, not just scores — so we can adjust the habit instead of scolding the symptom.",
+    name: "تحلیلِ رفتار",
+    body: "الگوها رو می‌خونیم، نه فقط نمره‌ها — تا به‌جای دعوا سرِ نشونه، خودِ عادت رو درست کنیم.",
     status: "live",
   },
   {
     code: "EXM",
-    name: "Weekly Exams",
-    body: "Not to rank you. To show you, every week, exactly where you actually stand.",
+    name: "آزمون‌های هفتگی",
+    body: "نه برای اینکه رتبه‌بندیت کنیم. برای اینکه هر هفته دقیق نشونت بدیم واقعاً کجای کاری.",
     status: "live",
   },
   {
     code: "NGT",
-    name: "Night Reports",
-    body: "A quiet summary of your day, waiting for you before you sleep.",
+    name: "گزارش‌های شبانه",
+    body: "یه خلاصه‌ی آروم از روزت، که قبل از خواب منتظرته.",
     status: "live",
   },
   {
     code: "MRN",
-    name: "Morning Sessions",
-    body: "The system wakes up with you — small, deliberate, focused.",
+    name: "جلسه‌های صبحگاهی",
+    body: "سیستم با تو بیدار می‌شه — کوچیک، حساب‌شده و متمرکز.",
     status: "live",
   },
   {
     code: "RES",
-    name: "Resources",
-    body: "Everything you need, nothing you don't. Curated, never dumped.",
+    name: "منابع",
+    body: "هرچی لازم داری، بی‌هیچ اضافه‌ای. دست‌چین‌شده، نه رو سرت ریخته.",
     status: "live",
   },
   {
     code: "CNF",
-    name: "Confidential Files",
-    body: "Notes only your mentors see — the human context behind the numbers.",
+    name: "پرونده‌های محرمانه",
+    body: "یادداشت‌هایی که فقط مربی‌هات می‌بینن — آدمِ پشتِ عددها.",
     status: "live",
   },
   {
     code: "GMF",
-    name: "Gamification",
-    body: "Progress you can feel. Not points for the sake of points.",
+    name: "بازی‌وارسازی",
+    body: "پیشرفتی که حسش می‌کنی. نه امتیاز، محضِ امتیاز.",
     status: "growing",
   },
   {
     code: "AVT",
-    name: "Avatar",
-    body: "A version of you that grows exactly as much as you do.",
+    name: "آواتار",
+    body: "نسخه‌ای از خودت که دقیقاً به‌اندازه‌ی خودت رشد می‌کنه.",
     status: "growing",
   },
   {
     code: "XP",
-    name: "Experience Points",
-    body: "Effort, finally made visible.",
+    name: "امتیازِ تجربه",
+    body: "تلاشت، بالاخره دیده می‌شه.",
     status: "growing",
   },
   {
     code: "LVL",
-    name: "Level System",
-    body: "Proof that you are not the same person you were last month.",
+    name: "سیستمِ سطح‌بندی",
+    body: "مدرکِ اینکه دیگه اون آدمِ ماهِ پیش نیستی.",
     status: "growing",
   },
   {
     code: "AIM",
-    name: "AI Mentor",
-    body: "A mentor that never sleeps — arriving soon, learning how you learn.",
+    name: "مربیِ هوش مصنوعی",
+    body: "مربی‌ای که هیچ‌وقت نمی‌خوابه — به‌زودی می‌رسه، داره یاد می‌گیره تو چطور یاد می‌گیری.",
     status: "soon",
   },
 ];
 
 const statusText: Record<Discovery["status"], string> = {
-  live: "active",
-  growing: "evolving",
-  soon: "incoming",
+  live: "فعال",
+  growing: "در حالِ رشد",
+  soon: "به‌زودی",
 };
 
 /**
@@ -97,18 +97,18 @@ export function Lab() {
   const current = DISCOVERIES[active];
 
   return (
-    <Scene id="lab" index="06" label="Pepsino Lab" className="flex">
+    <Scene id="lab" index="06" label="آزمایشگاه پپسینو" className="flex">
       <div className="grid-lab pointer-events-none absolute inset-0 opacity-40" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
 
       <div className="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-28 lg:grid-cols-[1.1fr_1fr]">
         {/* Index of discoveries */}
         <div>
-          <span className="eyebrow mb-4 block">Division 01 — Pepsino Lab</span>
+          <span className="eyebrow mb-4 block">بخشِ اول — آزمایشگاهِ پپسینو</span>
           <h2 className="display-lg mb-10 text-balance">
-            Not features.
+            اینا «قابلیت» نیستن.
             <br />
-            <span className="text-gradient-iris">Discoveries.</span>
+            <span className="text-gradient-iris">اینا «کشف»ان.</span>
           </h2>
 
           <ul className="flex flex-col">
@@ -157,7 +157,7 @@ export function Lab() {
 
             <div className="flex items-center justify-between font-mono text-[0.6rem] tracking-widest2 text-haze">
               <span>PEPSINO://LAB</span>
-              <span className="flex items-center gap-2 text-cyan">
+              <span className="fa-label flex items-center gap-2 text-cyan">
                 <span className="h-1.5 w-1.5 animate-breathe rounded-full bg-cyan" />
                 {statusText[current.status]}
               </span>

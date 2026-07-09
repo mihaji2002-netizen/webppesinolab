@@ -11,23 +11,23 @@ if (typeof window !== "undefined") {
 const CHAPTERS = [
   {
     k: "01",
-    title: "It started with a frustration.",
-    body: "One student kept doing everything right — and still felt the system was never really built for him.",
+    title: "همه‌چی از یه دلخوری شروع شد.",
+    body: "یه دانش‌آموز همه‌ی کارها رو درست انجام می‌داد — ولی بازم حس می‌کرد این سیستم اصلاً برای اون ساخته نشده.",
   },
   {
     k: "02",
-    title: "So he read. Obsessively.",
-    body: "Learning science. Behavioral psychology. Neuroscience. Instructional design. Anything that explained how people actually change.",
+    title: "برای همین شروع کرد به خوندن. بی‌وقفه.",
+    body: "علمِ یادگیری، روان‌شناسیِ رفتار، علوم اعصاب، طراحیِ آموزشی — هر چیزی که توضیح می‌داد آدم‌ها واقعاً چطور عوض می‌شن.",
   },
   {
     k: "03",
-    title: "Then he started testing.",
-    body: "Small experiments — first on himself, then with a few friends. Keep what works. Delete what doesn't. Repeat.",
+    title: "بعد شروع کرد به آزمایش کردن.",
+    body: "آزمایش‌های کوچیک — اول روی خودش، بعد با چندتا از دوستاش. هرچی جواب می‌داد می‌موند، هرچی نه پاک می‌شد. دوباره از اول.",
   },
   {
     k: "04",
-    title: "Pepsinogen is what remained.",
-    body: "Everything that didn't survive the evidence was thrown away. What stayed became an ecosystem.",
+    title: "چیزی که موند، شد پپسینوژن.",
+    body: "هرچی از زیرِ ذره‌بینِ واقعیت رد نشد، دور ریخته شد. چیزی که موند، شد یه اکوسیستم.",
   },
 ];
 
@@ -94,11 +94,13 @@ export function Story() {
       ref={rootRef}
       id="story"
       data-scene="03"
-      aria-label="The Story"
+      aria-label="داستان"
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
-      <span className="pointer-events-none absolute left-6 top-6 z-20 font-mono text-[0.62rem] tracking-widest2 text-haze md:left-10 md:top-10">
-        03 <span className="mx-2 text-haze/40">/</span> The Story
+      <span className="pointer-events-none absolute right-6 top-6 z-20 flex items-center text-haze md:right-10 md:top-10">
+        <span className="font-mono text-[0.62rem] tracking-widest2">03</span>
+        <span className="mx-2 text-haze/40">/</span>
+        <span className="fa-label">داستان</span>
       </span>
 
       <div
@@ -108,14 +110,14 @@ export function Story() {
         {/* Intro panel */}
         <section className="story-panel flex h-[100svh] w-screen flex-shrink-0 flex-col justify-center px-8 md:px-24">
           <div className="story-content max-w-xl">
-            <span className="eyebrow mb-6 block">The story</span>
+            <span className="eyebrow mb-6 block">داستانِ ما</span>
             <h2 className="display-xl text-gradient-soft">
-              No origin myth.
+              قصه‌ی قهرمانی نیست.
               <br />
-              Just a beginning.
+              فقط یه شروعِ ساده بود.
             </h2>
             <p className="mt-8 max-w-sm text-mist">
-              Keep scrolling — the story moves sideways from here.
+              همین‌طور اسکرول کن — از اینجا به بعد قصه از پهلو حرکت می‌کنه.
             </p>
           </div>
         </section>

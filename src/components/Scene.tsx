@@ -34,8 +34,10 @@ export const Scene = forwardRef<HTMLElement, SceneProps>(function Scene(
         className,
       )}
     >
-      <span className="pointer-events-none absolute left-6 top-6 z-20 font-mono text-[0.62rem] tracking-widest2 text-haze md:left-10 md:top-10">
-        {index} <span className="mx-2 text-haze/40">/</span> {label}
+      <span className="pointer-events-none absolute right-6 top-6 z-20 flex items-center text-haze md:right-10 md:top-10">
+        <span className="font-mono text-[0.62rem] tracking-widest2">{index}</span>
+        <span className="mx-2 text-haze/40">/</span>
+        <span className="fa-label">{label}</span>
       </span>
       {children}
     </section>

@@ -9,20 +9,19 @@ import { Reveal } from "@/components/Reveal";
  */
 export function Founder() {
   return (
-    <Scene id="founder" index="09" label="The Founder" className="flex">
+    <Scene id="founder" index="09" label="بنیان‌گذار" className="flex">
       <div className="pointer-events-none absolute bottom-[-10%] left-[-8%] h-[50vmin] w-[50vmin] rounded-full bg-irisdeep/20 blur-[130px]" />
 
       <div className="mx-auto flex min-h-[100svh] w-full max-w-4xl flex-col justify-center px-6 py-28">
         <Reveal as="span" className="eyebrow mb-10">
-          A note from the founder
+          یه حرف از بنیان‌گذار
         </Reveal>
 
         <Reveal
           as="p"
           className="font-display text-2xl font-light leading-snug text-chalk md:text-4xl"
         >
-          Hey. I&rsquo;m not a guru, and I&rsquo;m definitely not selling you a
-          dream.
+          سلام. من نه مرشدم، نه اومدم رؤیا بهت بفروشم.
         </Reveal>
 
         <Reveal
@@ -30,9 +29,9 @@ export function Founder() {
           amount={0.4}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-mist md:text-xl"
         >
-          I was just a student who got tired of pretending the system worked. So
-          I started building the one I wish I&rsquo;d had — piece by piece,
-          experiment by experiment.
+          من فقط یه دانش‌آموز بودم که خسته شد از اینکه وانمود کنه سیستم داره کار
+          می‌کنه. برای همین شروع کردم به ساختنِ همون چیزی که آرزو داشتم کاش
+          می‌داشتم — تیکه‌تیکه، آزمایش‌به‌آزمایش.
         </Reveal>
 
         <Reveal
@@ -40,14 +39,14 @@ export function Founder() {
           amount={0.4}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-mist md:text-xl"
         >
-          I still get things wrong. But I promise to keep testing, keep
-          listening, and keep science in charge instead of my ego. If that
-          sounds like your kind of place — you&rsquo;re already home.
+          هنوزم اشتباه می‌کنم. ولی قول می‌دم آزمایش کردن، گوش دادن و سپردنِ فرمون
+          به علم — به‌جای غرورم — رو ادامه بدم. اگه همچین جایی به دلت می‌شینه، تو
+          همین الانش هم خونه‌ای.
         </Reveal>
 
         <Reveal className="mt-14 flex items-center gap-4" amount={0.6}>
-          <span className="font-display text-2xl italic text-gradient-iris">
-            — the founder
+          <span className="font-display text-2xl text-gradient-iris">
+            — بنیان‌گذار
           </span>
           <span className="h-px flex-1 max-w-[120px] bg-white/10" />
         </Reveal>
@@ -55,10 +54,9 @@ export function Founder() {
         <Reveal
           as="p"
           amount={0.8}
-          className="mt-8 font-mono text-xs text-haze"
+          className="mt-8 fa-label text-haze"
         >
-          p.s. Geno was the first thing I built. It kept me company while I
-          figured the rest out.
+          پی‌نوشت: جنو اولین چیزی بود که ساختم. تا وقتی بقیه‌ش رو می‌فهمیدم، هوامو داشت.
         </Reveal>
       </div>
     </Scene>

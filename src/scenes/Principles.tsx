@@ -30,12 +30,14 @@ export function Principles() {
       ref={ref}
       id="principles"
       data-scene="05"
-      aria-label="Two Principles"
+      aria-label="دو اصل"
       className="relative h-[220vh] w-full"
     >
       <div className="sticky top-0 flex h-[100svh] w-full items-center justify-center overflow-hidden">
-        <span className="pointer-events-none absolute left-6 top-6 z-20 font-mono text-[0.62rem] tracking-widest2 text-haze md:left-10 md:top-10">
-          05 <span className="mx-2 text-haze/40">/</span> Two Principles
+        <span className="pointer-events-none absolute right-6 top-6 z-20 flex items-center text-haze md:right-10 md:top-10">
+          <span className="font-mono text-[0.62rem] tracking-widest2">05</span>
+          <span className="mx-2 text-haze/40">/</span>
+          <span className="fa-label">دو اصل</span>
         </span>
 
         <motion.div
@@ -48,17 +50,17 @@ export function Principles() {
             style={{ opacity: p1Opacity, y: p1Y, filter: p1FilterBlur }}
             className="absolute inset-x-0 top-1/2 -translate-y-1/2"
           >
-            <span className="font-mono text-sm text-haze">Principle 01</span>
-            <p className="display-xl mt-6 text-mist">Grades are temporary.</p>
+            <span className="fa-label text-sm text-haze">اصلِ اول</span>
+            <p className="display-xl mt-6 text-mist">نمره‌ها موقتی‌ان.</p>
           </motion.div>
 
           <motion.div
             style={{ opacity: p2Opacity, y: p2Y }}
             className="absolute inset-x-0 top-1/2 -translate-y-1/2"
           >
-            <span className="font-mono text-sm text-cyan">Principle 02</span>
+            <span className="fa-label text-sm text-cyan">اصلِ دوم</span>
             <p className="display-xl mt-6 text-gradient-iris">
-              Character stays forever.
+              آدم بودنت برای همیشه می‌مونه.
             </p>
           </motion.div>
         </div>
